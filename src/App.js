@@ -1,0 +1,12 @@
+import { Header } from "./components/Header";
+import { Home } from "./pages/Home";
+import RoutesApp from "./routes";
+function App() {
+  return (
+    <div className="App">
+    <RoutesApp/>
+    </div>
+  );
+}
+
+export default App;
