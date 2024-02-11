@@ -5,9 +5,8 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    
+  
 }
-
 
 .dashboard{
     width: 700px;
@@ -21,12 +20,7 @@
     h1{
         margin-top: 10px;
     }
-
-    @media screen and ( max-width: 680px){
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-    }
+   
 }
 
 .games{
@@ -36,20 +30,35 @@
     flex-direction: row; 
     width: 100%;
     flex-wrap: wrap;
+
+   
 }
 .gameInfo {
-    height: 50px;
+    height: 200px;
     width: 300px;
     margin: 10px 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column; 
+    justify-content: space-between;
+    flex-direction: row; 
     background-color: rgba(100, 100, 100, 0.1);
-    .title{
-        flex-direction: row;
-        justify-content: space-around;
-        display: flex;
-        width: 100%;
+    
+}
+
+.teamInfo{
+    width: 100px;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    img{
+        width: 100px;
+        height: 100px;
+    }
+
+    strong{
+        font-size: 2rem;
     }
 }

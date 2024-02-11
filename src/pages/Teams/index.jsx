@@ -2,9 +2,25 @@ import { SideBar } from '../../components/SideBar'
 import styles from './index.module.scss'
 import { Helmet } from 'react-helmet'
 import { useEffect, useState } from 'react'
+import { loadData } from '../../services/api.js'
 
 export const Teams = () => {
     const [fade, setFade] = useState(false);
+
+    const [teams, setTeams] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const teamsData = await loadData("/teams");
+                setTeams(teamsData);
+            } catch (error) {
+                console.error("Error loading teams:", error);
+            }
+        };
+        fetchData();
+    }, []);
+
 
     useEffect(() => {
         function handleScroll() {
@@ -21,7 +37,7 @@ export const Teams = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-    console.log(fade)
+
     return (
         <>
             <Helmet>
@@ -31,25 +47,12 @@ export const Teams = () => {
             <div className={`${styles.teamsBody} ${fade ? styles.fadeOut : ''}`}>
                 <h1>Teams</h1>
                 <div className={styles.teamsBoard}>
-                    <div className={styles.team}></div>
-                    <div className={styles.team}></div>
-                    <div className={styles.team}></div>
-                    <div className={styles.team}></div>
-                    <div className={styles.team}></div>
-                    <div className={styles.team}></div>
-                    <div className={styles.team}></div>
-                    <div className={styles.team}></div>
-                    <div className={styles.team}></div>
-                    <div className={styles.team}></div>
-                    <div className={styles.team}></div>
-                    <div className={styles.team}></div>
-                    <div className={styles.team}></div>
-                    <div className={styles.team}></div>
-                    <div className={styles.team}></div>
-                    <div className={styles.team}></div>
-                    <div className={styles.team}></div>
-                    <div className={styles.team}></div>
-                    <div className={styles.team}></div>
+                    {teams.map((item, index) => (
+                        <div key={index} className={styles.team}>
+                            <img src={item.logo} alt="Team Logo" />
+                            <strong>{item.name}</strong>
+                        </div>
+                    ))}
                 </div>
             </div>
         </>
