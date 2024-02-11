@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# NBA Stats Project
 
-## Available Scripts
+Este é um projeto em React focado em consumir dados de uma API que armazena estatísticas da NBA. O objetivo principal é criar uma aplicação web para exibir informações sobre equipes, jogadores,estatisticas e jogos ao vivo da NBA.
 
-In the project directory, you can run:
+## Funcionalidades
 
-### `npm start`
+- Consumo de dados da API da NBA para exibir estatísticas atualizadas.
+- Páginas dedicadas para equipes, jogadores e times.
+- Sidebar para navegação entre as diferentes páginas.
+- Ainda em construção: Responsividade da sidebar em algumas páginas.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Limitações da API
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A API da NBA impõe limites de acesso, permitindo apenas 100 requisições por dia para cada endpoint. Por isso, é importante otimizar o uso das requisições e considerar estratégias de cache para minimizar o número de chamadas à API.
 
-### `npm test`
+## Como Usar
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone este repositório para o seu ambiente local.
+2. Instale as dependências utilizando npm install.
+3. Execute o projeto com npm start.
+4. Acesse a aplicação em [http://localhost:3000](http://localhost:3000).
 
-### `npm run build`
+## Contribuindo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Sinta-se à vontade para contribuir com melhorias, correções de bugs ou novas funcionalidades. Basta seguir estas etapas:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Faça um fork do repositório.
+2. Crie uma nova branch com a sua feature: git checkout -b minha-feature.
+3. Commit suas mudanças: git commit -m 'Adicionando nova feature'.
+4. Envie para o repositório remoto: git push origin minha-feature.
+5. Faça um pull request para revisão.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Autor
 
-### `npm run eject`
+Renan Rocha Ramalho
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Licença
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Este projeto está sob a licença [MIT](https://opensource.org/licenses/MIT).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
