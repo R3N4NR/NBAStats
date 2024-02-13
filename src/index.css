@@ -5,17 +5,19 @@
   
 }
 
-body{
-  font-family: Arial, Helvetica, sans-serif;
+body {
+  font-family: 'Lato', sans-serif;
   background-image: url(./assets/homeBg.jpg);
-  background-size: auto;
-  background-repeat: repeat-y;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  
-  @media screen and (max-width: 680px) {
+  margin: 0; /* Removido o posicionamento absoluto */
+  background-attachment: fixed; /* Adicionado background-attachment */
+}
+
+@media screen and (max-width: 680px) {
+  body {
     background-size: auto; 
   }
 }

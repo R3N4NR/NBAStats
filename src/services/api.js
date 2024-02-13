@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const loadData = async (endpoint) => {
+export const loadData = async (endpoint, params) => {
 
 
     const options = {
@@ -11,7 +11,7 @@ export const loadData = async (endpoint) => {
             "X-RapidAPI-Host": "v2.nba.api-sports.io",
         },
     };
-
+   
     try {
         const response = await axios.request(options);
         console.log("DATA", response.data);

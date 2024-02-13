@@ -10,7 +10,7 @@ function Header() {
     const menuRef = useRef(null);
 
     useEffect(() => {
-        function handleResize() {
+         function handleResize() {
             const newWidth = window.innerWidth;
             setWindowWidth(newWidth);
 
@@ -29,13 +29,13 @@ function Header() {
     return (
         <header className={styles.container}>
             <div className={styles.containerContent}>
-                <Link to="/teams"><span>Equipes</span></Link>
-                <span>Jogadores</span>
+                <Link to="/teams">Equipes</Link>
+                <Link to="/players">Jogadores</Link>
                 <Link to="/"><img src={Logo} className={styles.logo} alt="logo"/></Link>
-                <span>Jogos</span>
-                <span>Estatisticas</span>
+                <Link to="/games">Jogos</Link>
+                <Link to="/statistics">Estatisticas</Link>
             </div>
-            
+            {/* Exibe o botão de hamburguer e mostra o header de mobile */}
             {windowWidth < 680 && (
                 <div className={styles.mobileNavBar}>
                     <button className={styles.menuButton} onClick={() => setMenuOpen(!menuOpen)}>
@@ -44,7 +44,7 @@ function Header() {
                     <Link to="/">NBA Stats<img src={Logo} className={styles.logo} alt="logo"/></Link>
                 </div>
             )}
-
+    {/* Se o botão for clicado renderiza o menu */}
             {menuOpen && (
                 <nav ref={menuRef} className={`${styles.menu} ${styles.open}`}>
                     <ul>

@@ -1,8 +1,9 @@
 import { SideBar } from '../../components/SideBar'
-import styles from './index.module.scss'
+import styles from './styles.module.scss'
 import { Helmet } from 'react-helmet'
 import { useEffect, useState } from 'react'
 import { loadData } from '../../services/api.js'
+import { Link } from 'react-router-dom'
 
 export const Teams = () => {
     const [fade, setFade] = useState(false);
@@ -13,7 +14,7 @@ export const Teams = () => {
         const fetchData = async () => {
             try {
                 const teamsData = await loadData("/teams");
-                setTeams(teamsData);
+                setTeams(teamsData.response);
             } catch (error) {
                 console.error("Error loading teams:", error);
             }
@@ -47,12 +48,19 @@ export const Teams = () => {
             <div className={`${styles.teamsBody} ${fade ? styles.fadeOut : ''}`}>
                 <h1>Teams</h1>
                 <div className={styles.teamsBoard}>
-                    {teams.map((item, index) => (
-                        <div key={index} className={styles.team}>
-                            <img src={item.logo} alt="Team Logo" />
+                    
+                    {teams && teams.length > 0 && teams.map((item, index) => (
+                       item.nbaFranchise && (
+                        <Link to={`/teams/${item.id}`}>
+                       <div key={index} className={styles.team}>
+                            <img src={item.logo} alt="Team Logo"  />
                             <strong>{item.name}</strong>
                         </div>
-                    ))}
+                        </Link>
+                        )
+                        
+                    )) }
+                    
                 </div>
             </div>
         </>

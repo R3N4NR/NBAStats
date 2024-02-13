@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { teamsData } from "../../assets/teams-logoo";
 export const Home = () => {
   const [games, setGames] = useState([]);
-  const [teamsLogo, setTeamsLogo] = useState([])
+  // const [teamsLogo, setTeamsLogo] = useState([])
   const teams = teamsData();
   useEffect(() => {
     const fetchData = async () => {
@@ -40,7 +40,7 @@ export const Home = () => {
         <div className={styles.dashboard}>
           <h1>Games In Live</h1>
 
-          {games ? (
+          {games.length > 0 ? (
             <div className={styles.games}>
               {games.map((game, index) => (
                 <div key={index} className={styles.gameInfo}>
