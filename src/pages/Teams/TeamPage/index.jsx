@@ -14,8 +14,10 @@ export const TeamPage = () => {
     const [pageTitle, setPageTitle] = useState('')
     useEffect(() => {
         const fetchData = async () => {
+            let ano = new Date()
+            let anoAtual = ano.getFullYear().toString()
             try {
-                const teamPlayersData = await loadData(`/players?team=${parseInt(id)}&season=2023`);
+                const teamPlayersData = await loadData(`/players?team=${parseInt(id)}&season=${anoAtual}`);
                 const teamData = await loadData(`/teams?id=${parseInt(id)}`);
 
                 setTeamDetails({

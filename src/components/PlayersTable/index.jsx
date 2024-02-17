@@ -3,8 +3,6 @@ import { useState, useEffect } from 'react'
 import { calcularIdade } from '../../utils/dateFormatter'
 export const PlayersTable = ( {players} ) => {
     
-
-console.log('players', players)
     return (
         <>
         <div className={styles.sectionHeader}>
