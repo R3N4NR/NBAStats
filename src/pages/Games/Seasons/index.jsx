@@ -1,37 +1,48 @@
 import { SideBar } from "../../../components/SideBar"
 import { Helmet } from "react-helmet"
 import styles from './styles.module.scss'
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
+import { useState } from "react"
+import { useEffect } from "react"
+import { loadData } from "../../../services/api"
 export const Games = () => {
+
+    const [seasons, setSeasons] = useState([]);
+
+    useEffect(() => {
+
+        const fetchData = async () => {
+
+            const data = await loadData('/seasons')
+            console.log(data.response)
+            setSeasons(data.response)
+        }
+
+        
+        fetchData()
+
+    }, [])
     return (
         <>
             <Helmet>
-            <title>NBA - Games</title>
+                <title>NBA - Games</title>
             </Helmet>
             <SideBar />
             <div className={styles.gamesBody}>
-                <h1>Games</h1>
+                <h1>Seasons</h1>
                 <div className={styles.gamesBoard}>
-                <Link to="/seasongames" element="">
-                    <div className={styles.seasonCard}>
-                       <span> 2020 </span>
-                    </div>
-                    </Link>
-                    <div className={styles.seasonCard}>
+                    {   
+                    seasons.map((item) => 
+                        <Link to={`/games/${+item}`}>
+                            <div  className={styles.seasonCard}>
+                                <span>{+item}</span>
+                            </div>
+                        </Link>
+                    )
+                        
+                    }
 
-                    </div>
-                    <div className={styles.seasonCard}>
 
-                    </div>
-                    <div className={styles.seasonCard}>
-
-                    </div>
-                    <div className={styles.seasonCard}>
-
-                    </div>
-                    <div className={styles.seasonCard}>
-
-                    </div>
                 </div>
             </div>
         </>

@@ -12,10 +12,12 @@ export const TeamPage = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [pageTitle, setPageTitle] = useState('')
+    const [season, setSeason] = useState('')
     useEffect(() => {
         const fetchData = async () => {
             let ano = new Date()
-            let anoAtual = ano.getFullYear().toString()
+            let anoAtual = (ano.getFullYear() - 1).toString()
+            setSeason(anoAtual)
             try {
                 const teamPlayersData = await loadData(`/players?team=${parseInt(id)}&season=${anoAtual}`);
                 const teamData = await loadData(`/teams?id=${parseInt(id)}`);
@@ -36,6 +38,7 @@ export const TeamPage = () => {
         fetchData();
     }, [id]);
 
+    console.log(teamDetails.players)
     return (
         <>
             <Helmet>
@@ -47,6 +50,7 @@ export const TeamPage = () => {
                 ) 
                 : (
                 <div className={styles.teamBoard}>
+                <h2>Season {season}</h2>
                 {teamDetails.players && <PlayersTable players={teamDetails.players} />}
                 </div>
                 )

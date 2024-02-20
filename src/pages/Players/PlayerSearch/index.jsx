@@ -19,10 +19,16 @@ export const Players = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
+        try{
+            const data = await loadData(`/players?search=${search}`)
+            setPlayers(data.response)
+            
+        }catch(err){
 
-        const data = await loadData(`/players?search=${search}`)
-        console.log(data.response)
-        setPlayers(data.response)
+        }
+        
+        
     }
     return (
         <>
@@ -35,11 +41,12 @@ export const Players = () => {
 
                 <div className={styles.playersBoard} >
                     <form className={styles.playersForm} onSubmit={handleSubmit}>
-                    <SearchBar handleChange={handleChange} value={search} />
+                    <SearchBar handleChange={handleChange} placeholder='Butler, Johnson, James ...' value={search} />
                     <Button type="submit" text="Buscar"/>
                     
                     </form>
-                    <PlayersTable players={players}/>
+                    {players.length > 0 ? (<PlayersTable players={players}/>) : '' }
+                    
                 </div>
             </div>
         </>

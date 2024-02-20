@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const loadData = async (endpoint, params) => {
+export const loadData = async (endpoint) => {
 
 
     const options = {

@@ -1,8 +1,7 @@
 import styles from './index.module.scss'
-import { useState, useEffect } from 'react'
 import { calcularIdade } from '../../utils/dateFormatter'
 export const PlayersTable = ( {players} ) => {
-    
+    console.log(players)
     return (
         <>
         <div className={styles.sectionHeader}>
@@ -25,7 +24,7 @@ export const PlayersTable = ( {players} ) => {
 
         <div className={styles.sectionBody}>
             {
-              players ?  players.map((item, index) => 
+              players &&  players.map((item, index) => 
                     <div key={index} className={styles.sectionContent}>
                         <div className={styles.column}>
                             {`${item.firstname} ${item.lastname}`}
@@ -43,7 +42,7 @@ export const PlayersTable = ( {players} ) => {
                             {item.college}
                         </div>
                     </div>
-                ) : <div>erro</div>
+                )
             }
         </div>
         </>

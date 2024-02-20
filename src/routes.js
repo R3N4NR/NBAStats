@@ -20,7 +20,7 @@ const RoutesApp = () => {
             <Route path='/players' element={<Players/>}/>
             <Route path='/games' element={<Games/>}/>
             <Route path='/statistics' element={<Statistics/>}/>
-            <Route path='/seasongames' element={< SeasonGames/>}/>
+            <Route path='/games/:season' element={< SeasonGames/>}/>
         </Routes>
         </BrowserRouter>
     )
