@@ -34,7 +34,7 @@ Sinta-se à vontade para contribuir com melhorias, correções de bugs ou novas 
 
 ## Autor
 
-Renan Rocha Ramalho
+Renan Ramalho - re-nan1@outlook.com - linkedin.com/in/renan-rramalho-dev/
 
 ## Licença
 
