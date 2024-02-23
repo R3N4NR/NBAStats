@@ -1,26 +1,25 @@
-.statisticsBody{
-    margin-top: 110px;
-    color: white;
-    max-width: 100vw;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
+.statisticsBody {
+  margin-top: 110px;
+  color: white;
+  max-width: 100vw;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.statisticsBoard{
-    
-    width: 60%;
-    height: 100%;
+.statisticsBoard {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+
+  @media screen and (max-width: 680px) {
+    width: 90%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 20px;
-    background-color: rgba(100,100,100,0.1);
-    @media screen and ( max-width: 680px){
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        margin-left: 50px;
-    }
+    flex-direction: column;
+    margin-left: 50px;
+  }
 }

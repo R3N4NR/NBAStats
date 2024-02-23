@@ -22,6 +22,8 @@ A API da NBA impõe limites de acesso, permitindo apenas 100 requisições por d
 3. Execute o projeto com npm start.
 4. Acesse a aplicação em [http://localhost:3000](http://localhost:3000).
 
+
+
 ## Contribuindo
 
 Sinta-se à vontade para contribuir com melhorias, correções de bugs ou novas funcionalidades. Basta seguir estas etapas:

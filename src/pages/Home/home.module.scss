@@ -1,64 +1,59 @@
-.homeBody{
-    margin-top: 150px;
-    color: white;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-  
+.homeBody {
+  margin-top: 150px;
+  color: white;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
-.dashboard{
-    width: 700px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    
-    h1{
-        margin-top: 10px;
-    }
-   
+.dashboard {
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+
+  h1 {
+    margin-top: 10px;
+  }
 }
 
-.games{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row; 
-    width: 100%;
-    flex-wrap: wrap;
-
-   
+.games {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
 }
 .gameInfo {
-    height: 200px;
-    width: 300px;
-    margin: 10px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row; 
-    background-color: rgba(100, 100, 100, 0.1);
-    
+  height: 200px;
+  width: 300px;
+  margin: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: rgba(100, 100, 100, 0.1);
 }
 
-.teamInfo{
+.teamInfo {
+  width: 100px;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+  img {
     width: 100px;
-    height: 100%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 10px;
-    img{
-        width: 100px;
-        height: 100px;
-    }
+    height: 100px;
+  }
 
-    strong{
-        font-size: 2rem;
-    }
+  strong {
+    font-size: 2rem;
+  }
 }

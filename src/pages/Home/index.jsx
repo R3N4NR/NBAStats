@@ -1,9 +1,9 @@
-import styles from "./home.module.scss";
-import Helmet from "react-helmet";
-import { loadData } from "../../services/api";
-import { useEffect, useState } from "react";
+import styles from './home.module.scss';
+import Helmet from 'react-helmet';
+import { loadData } from '../../services/api';
+import { useEffect, useState } from 'react';
 // import { teams } from "../../assets/teams-logo";
-import { teamsData } from "../../assets/teams-logoo";
+import { teamsData } from '../../assets/teams-logoo';
 export const Home = () => {
   const [games, setGames] = useState([]);
   // const [teamsLogo, setTeamsLogo] = useState([])
@@ -11,11 +11,16 @@ export const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const gamesData = await loadData("/games/live/");
+        const gamesData = await loadData(
+          '/games/live/',
+        );
 
         setGames(gamesData);
       } catch (error) {
-        console.error("Error loading teams:", error);
+        console.error(
+          'Error loading teams:',
+          error,
+        );
       }
     };
 
@@ -43,16 +48,49 @@ export const Home = () => {
           {games.length > 0 ? (
             <div className={styles.games}>
               {games.map((game, index) => (
-                <div key={index} className={styles.gameInfo}>
-                  <div className={styles.teamInfo}>
-                    <img src={loadTeamLogo(game.teams.home.nickname)} alt="Home Team Logo" />
-                    <span>{game.teams.home.nickname}</span>
-                    <strong>{game.scores.home.points}</strong>
+                <div
+                  key={index}
+                  className={styles.gameInfo}
+                >
+                  <div
+                    className={styles.teamInfo}
+                  >
+                    <img
+                      src={loadTeamLogo(
+                        game.teams.home.nickname,
+                      )}
+                      alt="Home Team Logo"
+                    />
+                    <span>
+                      {game.teams.home.nickname}
+                    </span>
+                    <strong>
+                      {game.scores.home.points}
+                    </strong>
                   </div>
-                  <div className={styles.teamInfo}>
-                    <img src={loadTeamLogo(game.teams.visitors.nickname)} alt="Home Team Logo" width="100px" />
-                    <span>{game.teams.visitors.nickname}</span>
-                    <strong>{game.scores.visitors.points}</strong>
+                  <div
+                    className={styles.teamInfo}
+                  >
+                    <img
+                      src={loadTeamLogo(
+                        game.teams.visitors
+                          .nickname,
+                      )}
+                      alt="Home Team Logo"
+                      width="100px"
+                    />
+                    <span>
+                      {
+                        game.teams.visitors
+                          .nickname
+                      }
+                    </span>
+                    <strong>
+                      {
+                        game.scores.visitors
+                          .points
+                      }
+                    </strong>
                   </div>
                 </div>
               ))}

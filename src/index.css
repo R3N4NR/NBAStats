@@ -1,8 +1,7 @@
-*{
-  padding:0;
-  margin:0;
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-
 }
 
 body {
@@ -15,18 +14,15 @@ body {
   margin: 0; /* Removido o posicionamento absoluto */
   background-attachment: fixed; /* Adicionado background-attachment */
   -webkit-font-smoothing: antialiased;
-
 }
 
 @media screen and (max-width: 680px) {
   body {
-    background-size: auto; 
+    background-size: auto;
   }
 }
 
-
-
-.app{
+.app {
   display: flex;
   width: 100%;
   justify-content: center;

@@ -1,34 +1,33 @@
-.playersBody{
-    margin-top: 110px;
-    color: white;
-    max-width: 100vw;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
+.playersBody {
+  margin-top: 110px;
+  color: white;
+  max-width: 100vw;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.playersBoard{
-    
-    width: 100%;
-    height: 100%;
+.playersBoard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+  background-color: rgba(100, 100, 100, 0.1);
+  @media screen and (max-width: 680px) {
+    width: 90%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 20px;
-    background-color: rgba(100,100,100,0.1);
-    @media screen and ( max-width: 680px){
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        margin-left: 50px;
-    }
+    flex-direction: column;
+    margin-left: 50px;
+  }
 }
 
-.playersForm{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 400px;
-    margin-top: 30px;
+.playersForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+  margin-top: 30px;
 }

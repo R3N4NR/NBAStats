@@ -1,78 +1,74 @@
-.oitavas{
-color: black;
-    height: 490px;
-    width: 150px;
-    margin-left: 30px;
+.oitavas {
+  color: black;
+  height: 490px;
+  width: 150px;
+  margin-left: 30px;
 }
 
-.quartas{
-    color: black;
-        width: 150px;
-        .gameBracket{
-            width: 100%;          
-            margin-left: 20px;
-            height: auto;
-            }
-            
-            .team {
-                margin-bottom: 70px;
-                margin-top: 30px;
-                }
-}
-
-
-.semi{
-    width: 150px;
-    margin-left: 40px;
-    .gameBracket{
-        width: 100%;          
-        height: 300px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-top: 80px;
-        }
-        
-}
-
-.final{
-    width: 150px;
+.quartas {
+  color: black;
+  width: 150px;
+  .gameBracket {
+    width: 100%;
     margin-left: 20px;
-    .gameBracket{
-        width: 100%;          
-        height: 300px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 80px;
-        }
-}
-.gameBracket{
-width: 100%;
-height: calc(100%/4);
-margin-top: 2px;
+    height: auto;
+  }
 
+  .team {
+    margin-bottom: 70px;
+    margin-top: 30px;
+  }
 }
 
-.team{
-width: 100%;
-height: 50px;
-border-radius: 20px;
-background-color: white;
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-align-items: center;
-font-size: 1rem;
-margin-top: 2px;
-margin-bottom: 2px;
-}
-
-.colocacao{
-    width: 40px;
-    font-size: 1.3rem;
+.semi {
+  width: 150px;
+  margin-left: 40px;
+  .gameBracket {
+    width: 100%;
+    height: 300px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 80px;
+  }
 }
 
+.final {
+  width: 150px;
+  margin-left: 20px;
+  .gameBracket {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 80px;
+  }
+}
+.gameBracket {
+  width: 100%;
+  height: calc(100% / 4);
+  margin-top: 2px;
+}
+
+.team {
+  width: 100%;
+  height: 50px;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1rem;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.colocacao {
+  width: 40px;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

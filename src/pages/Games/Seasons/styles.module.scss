@@ -1,49 +1,45 @@
-.gamesBody{
-    margin-top: 150px;
+.gamesBody {
+  margin-top: 150px;
+  color: white;
+  width: 100vw;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.gamesBoard {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+  background-color: rgba(100, 100, 100, 0.1);
+
+  a {
+    text-decoration: none;
     color: white;
-    width: 100vw;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  @media screen and (max-width: 680px) {
+    width: 90%;
     display: flex;
     flex-direction: column;
+    margin-left: 50px;
+  }
 }
 
-.gamesBoard{
-    
-    width: 60%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 20px;
-    background-color: rgba(100,100,100,0.1);
-    
-    a{
-        text-decoration: none;
-        color: white;
-        font-size: 2rem;
-        font-weight: bolder;
-    }
-    @media screen and ( max-width: 680px){
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        margin-left: 50px;
-    }
-}
-
-.seasonCard{
-    background-color: rgba(255,255,255,0.4);
-    box-shadow: 2px 4px rgba(50,50,150,0.7);
-    width: 200px;
-    height: 100px;
-    margin: 20px;
-    border-radius: 10px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    
-    
-   
+.seasonCard {
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 2px 4px rgba(50, 50, 150, 0.7);
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 10px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
