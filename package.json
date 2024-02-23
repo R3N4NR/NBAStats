@@ -8,7 +8,11 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.7",
     "dotenv": "^16.4.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
     "mkdirp": "^3.0.1",
+    "prettier": "^3.2.5",
     "react": "^18.2.0",
     "react-calendar": "^4.8.0",
     "react-dom": "^18.2.0",
@@ -26,7 +30,9 @@
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --fix --write .",
+    "lint": "eslint ."
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +53,8 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/eslint-parser": "^7.23.10",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "eslint-plugin-react": "^7.33.2"
   }
 }
